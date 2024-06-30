@@ -1,0 +1,418 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Uchen', serif;
+}
+.all-content{
+    background: #161a1d;
+    background: linear-gradient(180deg, hsla(206, 14%, 10%, 1) 51%, hsla(339, 80%, 12%, 1) 100%);
+}
+
+/* Navigation */
+#navbar{
+
+    background-color: #d90429;
+    font-weight: bold;
+}
+
+.logo-button {
+    background: #f5f5f5;
+    font-family: inherit;
+    padding: 0.2em 0.5em;
+    font-weight: 900;
+    font-size: 28px;
+    border: 2px solid #000000;
+    border-radius: 0.4em;
+    box-shadow: 0.1em 0.1em;
+    cursor: pointer;
+    font-family: Sunny Spells;
+  }
+  
+  .logo-button:hover {
+    transform: translate(-0.05em, -0.05em);
+    box-shadow: 0.15em 0.15em;
+  }
+  
+  .logo-button:active {
+    transform: translate(0.05em, 0.05em);
+    box-shadow: 0.05em 0.05em;
+  }
+  
+.navbar-nav{
+    margin-left: 10px;
+}
+.nav-link{
+    color: #f5f5f5;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px #000000;
+    margin-left: 15px;
+    transition: 0.5s ease;
+    font-size: 28px;
+}
+.nav-link:hover{
+    background-color: #03071e;
+    color: #f5f5f5;
+    border-radius: 5px;
+}
+/* navigation */
+
+
+/* Intro Section */
+.home{
+    width: 100%;
+    height: 88.5vh;
+    display: flex;
+    background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url(../public/image/Background/homesection-bg.jpg);
+    background-size: cover;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 0;
+}
+.home .content{
+    flex: 1 1 400px;
+    margin-left: 60px;
+}
+.content h3{
+    color: #f5f5f5;
+    font-size: 80px;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px #000000;
+}
+.content h2{
+    font-size: 80px;
+    color: #f5f5f5;
+    text-shadow: 1px 1px 1px #000000;
+    font-weight: bold;
+    justify-content: center;
+}
+
+.changecontent::after{
+    content: ' ';
+    color: #F8325D;
+    animation: changetext 5s infinite linear;
+    font-weight: bold;
+}
+@keyframes changetext{
+    0%{content: "Cakes";}
+    20%{content: "Brownies";}
+    50%{content: "Donuts";}
+    60%{content: "Snacks";}
+    100%{content: "Sweets";}
+}
+.content p{
+    color: #f5f5f5;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px #000000;
+}
+.content .btn{
+    position: relative;
+    background-color: rgb(230, 34, 77);
+    border-radius: 5px;
+    box-shadow: rgb(121, 18, 55) 0px 4px 0px 0px;
+    padding: 15px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    box-sizing: border-box;
+    width: 250px;
+    height: 80px;
+    color: #fff;
+    border: none;
+    font-size: 40px;
+    transition: all 0.3s ease-in-out;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.content .btn::before {
+    content: "";
+    background-color: rgb(248, 50, 93);
+    width: 0;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: width 700ms ease-in-out;
+    display: inline-block;
+  }
+  
+  .content .btn:hover::before {
+    width: 100%;
+  }
+
+
+
+
+@media screen and (max-width:800px){
+    .content h3{
+        font-size: 50px;
+    }
+}
+@media screen and (max-width:860px){
+    .home{
+        height: 120vh;
+    }
+}
+@media screen and (max-width:560px){
+    .home{
+        height: 100vh;
+    }
+}
+@media screen and (max-width:330px){
+    .content h2{
+        font-size: 30px;
+    }
+    .content h3{
+        font-size: 30px;
+    }
+}
+/* Intro Section */
+
+
+/* products section */
+#product-cards h1{
+    text-align: center;
+    font-weight: bold;
+    margin-top: 50px;
+    color: #f5f5f5;
+    text-shadow: 1px 1px 1px #000000;
+    border-bottom: 2px solid #f5f5f5;
+}
+#product-cards .card{
+    background-color: #161a1d;
+    box-shadow: 0 0 3px #000000;
+    border-radius: 15px;
+    cursor: pointer;
+}
+.overlay{
+    display: block;
+    opacity: 0;
+    position: absolute;
+    top: 10%;
+    margin-left: 0;
+    width: 70px;
+}
+#product-cards .card:hover .overlay{
+    opacity: 1;
+    margin-left: 5%;
+    transition: 0.5s ease;
+}
+.overlay i img{
+    background-color: #161a1d;
+    height: 30px;
+    width: 30px;
+    font-size: 20px;
+    padding: 7px;
+    margin: -20%;
+    margin-bottom: 5%;
+    cursor: pointer;
+}
+.overlay .btn-secondary{
+    background: transparent !important;
+    border: none;
+    box-shadow: none;
+}
+#product-cards h3{
+    color: #f5f5f5;
+    text-shadow: 1px 1px 1px #000000;
+    font-size: 24px;
+}
+.star .checked{
+     color: yellow;
+}
+
+.star {
+    color: #f5f5f5;
+}
+#product-cards h6{
+    font-size: 20px;
+    color: #f5f5f5;
+    font-weight: bold;
+    margin-top: 5px;
+}
+#product-cards h6 span button{
+    position: relative;
+    background-color: rgb(230, 34, 77);
+    border-radius: 5px;
+    box-shadow: rgb(121, 18, 55) 0px 4px 0px 0px;
+    padding: 5px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    box-sizing: border-box;
+    width: 100px;
+    height: 26px;
+    color: #fff;
+    border: none;
+    font-size: 15px;
+    transition: all 0.3s ease-in-out;
+    z-index: 1;
+    overflow: hidden;
+}
+#product-cards h6 span button::before {
+    content: "";
+    background-color: rgb(248, 50, 93);
+    width: 0;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: width 700ms ease-in-out;
+    display: inline-block;
+  }
+  #product-cards h6 span button:hover::before {
+    width: 100%;
+  }
+/* products section */
+
+
+
+/* about-us page */
+
+#about{
+    margin-top: 50px;
+}
+#about h1{
+    text-align: center;
+    font-weight: bold;
+    margin-top: 50px;
+    color: #f5f5f5;
+    text-shadow: 1px 1px 1px #000000;
+    border-bottom: 2px solid #f5f5f5;
+}
+#about .card{
+    background-color: #f5f5f5;
+    box-shadow: 0px 0px 5px #000000;
+}
+#about p{
+    color: #f5f5f5;
+    text-shadow: 1px 1px 1px #000000;
+    font-weight: bold;
+}
+#bt button{
+    background: #f5f5f5;
+    font-family: inherit;
+    padding: 0.2em 0.5em;
+    font-weight: 900;
+    font-size: 18px;
+    border: 2px solid #000000;
+    border-radius: 0.4em;
+    box-shadow: 0.1em 0.1em;
+    cursor: pointer;
+}
+  #bt button:hover {
+    transform: translate(-0.05em, -0.05em);
+    box-shadow: 0.15em 0.15em;
+  }
+  
+  #bt button:active {
+    transform: translate(0.05em, 0.05em);
+    box-shadow: 0.05em 0.05em;
+  }
+@media screen and (max-width:1000px){
+    #about p{
+        font-size: 10px;
+    }
+}
+@media screen and (max-width:760px){
+    #about p{
+        font-size: 20px;
+    }
+}
+/* about-us page */
+
+/* contact-us page */
+#contact{
+    margin-top: 100px;
+}
+#contact h1{
+    text-align: center;
+    font-weight: bold;
+    margin-top: 100px;
+    color: #f5f5f5;
+    text-shadow: 1px 1px 1px #000000;
+    border-bottom: 2px solid #f5f5f5;
+}
+#contact input{
+    background-color: #f5f5f5;
+}
+#contact input::placeholder{
+    color: #000000;
+}
+#contact textarea{
+    background-color: #f5f5f5;
+}
+#contact textarea::placeholder{
+    color: #000000;
+}
+#messagebtn{
+    text-align: center;
+}
+#messagebtn button{
+    width: 200px;
+    height: 30px;
+    letter-spacing: 3px;
+    font-weight: bold;
+    background: transparent;
+    border: 2px solid #f5f5f5;
+    color: #f5f5f5;
+    transition: 0.5s;
+    cursor: pointer;
+}
+#messagebtn button:hover{
+    background-color: #000000;
+}
+/* contact-us Page*/
+
+/* web-footer */
+#footer{
+    width: 100%;    
+    background-color: #161A1D;
+    box-shadow: 0px 0px 5px #000000;
+    margin-top: 100px;
+}
+#footer h1{
+    color: #f5f5f5;
+    padding-top: 30px;
+}
+#footer p{
+    color: #f5f5f5;
+}
+.icons i{
+    background-color: #f5f5f5;
+    color: #000000;
+    border-radius: 50px;
+    padding: 6px;
+    font-size: 30px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.icons i:hover{
+    background-color: #000000;
+    color: #f5f5f5;
+}
+.copyright{
+    color: #f5f5f5;
+    margin-top: 20px;
+}
+.credite{
+    color: #f5f5f5;
+}
+/* web-footer */
+html{
+    scroll-behavior: smooth;
+}
+.arrow{
+    position: fixed;
+    background-color:  #f5f5f5;
+    border-radius: 50px;
+    height: 50px;
+    bottom: 40px;
+    right: 50px;
+    text-decoration: none;
+    text-align: center;
+    line-height: 50px;
+}
